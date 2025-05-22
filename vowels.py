@@ -1,10 +1,11 @@
-string=input("enter string:")
-volwes=(a,i,e,o,u)
-cnt=0
+string = input("Enter string: ")
+vowels = ('a', 'e', 'i', 'o', 'u')
+cnt = 0
 
-for char in string:
-    if char in volwes:
-        cout+=1
+for char in string.lower():  # Convert to lowercase to match vowels
+    if char in vowels:
+        cnt += 1
     else:
         pass
-print(vowels)
+
+print("Number of vowels:", cnt)
