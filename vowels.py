@@ -1,11 +1,13 @@
-string = input("Enter string: ")
-vowels = ('a', 'e', 'i', 'o', 'u')
-cnt = 0
+def count_vowels(text):
+    vowels = "aeiouAEIOU"
+    count = 0
+    for char in text:
+        if char in vowels:
+            count += 1
+    return count
 
-for char in string.lower():  # Convert to lowercase to match vowels
-    if char in vowels:
-        cnt += 1
-    else:
-        pass
+# Example usage
+user_input = input("Enter a string: ")
+vowel_count = count_vowels(user_input)
+print(f"Number of vowels: {vowel_count}")
 
-print("Number of vowels:", cnt)
